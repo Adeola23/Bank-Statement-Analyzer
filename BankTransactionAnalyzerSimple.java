@@ -16,7 +16,7 @@ public class BankTransactionAnalyzerSimple {
         final Path path = Paths.get(RESOURCES + fileName);
         final List<String> lines = Files.readAllLines(path);
 
-        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLineFromCSV(lines)
+        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLineFromCSV(lines);
 
 
 
