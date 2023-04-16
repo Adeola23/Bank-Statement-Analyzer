@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BankTransactionAnalyzerSimple {
-    private static final String RESOURCES = "bank-statement-analyzer/resources";
+    private static final String RESOURCES = "bank-statement-analyzer/resources/";
 
     public static void main (final String... args) throws IOException{
         final BankStatementCSVParser bankStatementCSVParser = new BankStatementCSVParser();
