@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BankStatementCSVParser implements BankStatementParser {
     private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    @Override
     public BankTransaction parseFrom(final String line) {
         final String[] columns = line.split(",");
         final LocalDate date = LocalDate.parse(columns[0], DATE_PATTERN);
@@ -13,6 +14,7 @@ public class BankStatementCSVParser implements BankStatementParser {
         return new BankTransaction(date, amount, description);
     }
 
+    @Override
     public List<BankTransaction> parseLineFrom(final List<String> lines){
         final List<BankTransaction> bankTransactions = new ArrayList<>();
         for (final String line : lines){
