@@ -1,3 +1,5 @@
+package src.main.java;
+
 import java.time.LocalDate;
 
 public class BankTransaction {
@@ -5,7 +7,7 @@ public class BankTransaction {
     private final double amount;
     private final String description;
 
-    BankTransaction(final LocalDate date, final double amount, final String description){
+    public BankTransaction(final LocalDate date, final double amount, final String description){
         this.date = date;
         this.amount = amount;
         this.description = description;

@@ -1,9 +1,14 @@
+package src.main.java;
+
+import src.main.java.BankStatementParser;
+import src.main.java.BankStatementProcessor;
+import src.main.java.BankTransaction;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Month;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BankTransactionAnalyzerSimple {
