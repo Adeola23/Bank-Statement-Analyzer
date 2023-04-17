@@ -14,7 +14,7 @@ public class BankTransactionAnalyzerSimple {
         final String fileName = args[0];
         final Path path = Paths.get(RESOURCES + fileName);
         final List<String> lines = Files.readAllLines(path);
-        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLineFromCSV(lines);
+        final List<BankTransaction> bankTransactions = bankStatementCSVParser.parseLineFrom(lines);
         final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
         collecSummary(bankStatementProcessor);
 
@@ -27,6 +27,14 @@ public class BankTransactionAnalyzerSimple {
         System.out.println("The total salary received is " + bankStatementProcessor.calculateTotalForCategory("Salary"));
 
 
+    }
+
+    public void analyze(final String fileName, final BankStatementParser bankStatementParser) throws IOException{
+        final Path path = Paths.get(RESOURCES + fileName);
+        final List<String> lines = Files.readAllLines(path);
+        final List<BankTransaction> bankTransactions = bankStatementParser.parseLineFrom(lines);
+        final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
+        collecSummary(bankStatementProcessor);
     }
 
 
