@@ -1,4 +1,4 @@
-package src.main.java;
+package src.;
 
 import src.main.java.BankStatementCSVParser;
 import src.main.java.BankStatementParser;
