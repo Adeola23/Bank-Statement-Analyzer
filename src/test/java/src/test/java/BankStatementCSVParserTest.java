@@ -1,7 +1,10 @@
 package src.test.java;
+
 import src.main.java.*;
 import org.junit.Test;
 import org.junit.Assert;
+import src.main.java.BankStatementParser;
+import src.main.java.BankTransaction;
 
 import java.time.LocalDate;
 import java.time.Month;
