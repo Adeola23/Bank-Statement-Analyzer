@@ -4,3 +4,5 @@ package src.main.java;
 public interface BankTransactionFilter {
     boolean test(BankTransaction bankTransaction);
 }
+
+
