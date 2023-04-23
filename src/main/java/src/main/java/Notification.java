@@ -21,6 +21,8 @@ public class Notification {
     public List<String> getErrors(){
         return this.errors;
     }
+
+
 }
 
 

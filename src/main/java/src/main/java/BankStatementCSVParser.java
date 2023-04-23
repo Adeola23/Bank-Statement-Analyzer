@@ -13,6 +13,7 @@ public class BankStatementCSVParser implements BankStatementParser {
 //        if(columns.length < EXPECTED_ATTRIBUTES_LENGTH){
 //            throw new CSVSyntaxException();
 //        }
+        new StatementValidator(columns[0], columns[1], columns[2]).validate();
         final LocalDate date = LocalDate.parse(columns[0], DATE_PATTERN);
         final double amount = Double.parseDouble(columns[1]);
         final String description = columns[2];
